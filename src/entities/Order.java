@@ -1,6 +1,5 @@
 package entities;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -10,7 +9,7 @@ import entities.enums.OrderStatus;
 
 public class Order {
 
-	private static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+	private static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 	
 	private LocalDateTime moment;
 	private OrderStatus status;
