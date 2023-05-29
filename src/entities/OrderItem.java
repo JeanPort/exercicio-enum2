@@ -2,7 +2,7 @@ package entities;
 
 public class OrderItem {
 
-	private Integer quantite;
+	private Integer quantity;
 	private Double price;
 	
 	private Product product;
@@ -11,17 +11,17 @@ public class OrderItem {
 	}
 
 	public OrderItem(Integer quantite, Product product) {
-		this.quantite = quantite;
+		this.quantity = quantite;
 		this.price = product.getPrice();
 		this.product = product;
 	}
 
 	public Integer getQuantite() {
-		return quantite;
+		return quantity;
 	}
 
 	public void setQuantite(Integer quantite) {
-		this.quantite = quantite;
+		this.quantity = quantite;
 	}
 
 	public Double getPrice() {
@@ -41,14 +41,14 @@ public class OrderItem {
 	}
 	
 	public double subTotal() {
-		return this.price * this.quantite;
+		return this.price * this.quantity;
 	}
 
 	@Override
 	public String toString() {
 		return this.product 
 				+ ", quantity: " 
-				+ this.quantite
+				+ this.quantity
 				+ " subtotal: $"
 				+ String.format("%.2f", this.subTotal());
 	}
